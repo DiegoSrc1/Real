@@ -1,0 +1,38 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{%load static%}
+
+<div class="contenidoLocal">
+
+    <div class="titulo_local">
+
+        <h1>Visita nuestro local</h1>
+
+    </div>
+    
+    <div class="ubicacion_local">
+        <h3>Dirección</h3>
+        <p>Pasaje Vargas 475, Río Bueno</p>
+        <p>Puedes llamar para notificar tu llegada.</p>
+        <p>Celular y WhatsApp: </p>
+        <p>Correo: </p>
+
+    </div>
+
+    <div class="mapa_local">
+        
+        <div class="mapa2">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d380.1741120760146!2d-72.93883217465506!3d-40.
+            33362944156096!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x96164285c1b0ecf7%3A0xad00b5e30727f55b!2sPje.
+            %20Vargas%2C%20Rio%20Bueno%2C%20R%C3%ADo%20Bueno%2C%20Los%20R%C3%ADos!5e0!3m2!1ses-419!2scl!4v1705693381478!5m2!1ses-419!2scl" 
+            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+
+        <div class="fotolocalmapa">
+            
+        </div>
+    </div>
+</div>
+
+{% endblock %}

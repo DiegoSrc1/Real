@@ -1,0 +1,81 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+<div class="generalCatalogo">
+
+    <div class="tituloCatalogo">
+        <h1>Productos</h1>
+    </div>
+
+    <div class="resultados">
+        
+        <div class="totaldeProductos">
+            Mostrando {{ pro.start_index }} - {{ pro.end_index }} de {{ pro.paginator.count }} productos
+        </div>
+
+
+    </div>
+
+    <div class="Catalogo">
+
+
+        <div class="filtrosEspecificos">
+            <form method="get">
+                <h4>CATEGORÍAS</h4>
+                <button name="categoria" value="Cajas" type="submit">Cajas</button>
+                <button name="categoria" value="Bandeja" type="submit">Bandeja</button>
+                <button name="categoria" value="Comodas" type="submit">Comodas</button>
+                <button name="categoria" value="Laser" type="submit">Corte Laser</button>
+                <button name="borrar_filtros" type="submit"">Todos</button>
+            </form>
+
+            <div>
+                <h4 style="margin-top: 10px;">Al por mayor</h4>
+                <p style="margin-top: 10px;">Los precios al por mayor aplican desde X unidades.</p>
+            </div>
+        </div>
+        
+
+        <div class="productos">
+
+            {% for p in pro %}
+            
+                {%if p.activo %}
+
+                    <div class="producto">
+                        <div class="imagenProducto">
+                            <a href="{% url 'verP' p.id %}"> <img class="imgp"  src="{{ p.imagen.url }}"> </a>
+                        </div>
+
+                        <div class="infoProducto">
+
+                            <div class="nombreP">
+                                <h6><a href="{% url 'verP' p.id %}"> {{p.nombre}}</a> </h6>
+                            </div>
+
+                            <div class="precioP">
+                                <p>Precio normal: {{p.precio}}</p>
+                                <p>Precio por mayor: {{p.precio_x_mayor}}</p>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                {%endif%}
+
+            {%endfor%}
+
+            <div class="paginator">
+                {% include 'Productos/paginator.html' %}
+            </div>
+
+        </div>
+
+    </div>
+ 
+</div>
+
+{% endblock %}

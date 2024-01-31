@@ -1,0 +1,80 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+<div style="width: 100%; " class="adm-productos">
+    
+    <div class="contenedor-tabla">
+    
+        <table class="tabla-productos">
+            <thead>
+                <tr>
+                    <th >ID</th>
+                    <th>Imagen</th>
+                    <th>Nombre</th>
+                    <th>Activo</th>
+                    <th>Activar/Desactivar</th>
+                    <th>Ver</th>
+                    <th>Editar</th>
+                    <th>Borrar</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for p in serv %}
+                <tr>
+                    <td >{{p.id}}</td>
+                    <td><img src="{{p.imagen.url}}" width="100px" height="100px" style="margin-left: 10%; margin-top: 10px;"></td>
+                    <td>{{p.nombre}}</td>
+                    <td class="activo-celda">{{ p.activo|yesno:"SI,NO" }}</td>
+
+                    <td><a href="{% url 'habilitarS' p.id %}" class="toggle-activo">                    <i class="fa-solid fa-eye-low-vision fa-xl"></i> </a></td>
+
+                    <td><a href="{%url 'verS' p.id %}"> <i class="fa-solid fa-eye fa-xl"></i> </a></td>
+                    <td><a href="{%url 'editS' p.id %}"> <i class="fa-solid fa-pencil fa-xl"></i> </a></td>
+                    <td> <a href="{%url 'verSE' p.id %}"> <i class="fa-solid fa-trash fa-xl"></i> </a></td>
+
+                </tr>
+                {% endfor %}
+
+            </tbody>
+
+    
+        </table>
+
+        <div class="paginator2 ">
+            {% include 'Servilletas/paginator_servilletas.html' %}
+        </div>
+
+    </div>
+
+</div>
+<!-- Agrega jQuery a tu base.html si aún no lo has hecho -->
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+<script>
+$(document).ready(function() {
+    // Manejar clic en el botón de habilitar/deshabilitar
+    $('.toggle-activo').on('click', function(e) {
+        e.preventDefault();
+
+        var boton = $(this);
+        var url = boton.attr('href');
+
+        // Realizar la solicitud AJAX
+        $.ajax({
+            type: 'GET',
+            url: url,
+            success: function() {
+                // Cambiar el texto en la celda "Activo"
+                var celdaActivo = boton.closest('tr').find('.activo-celda');
+                celdaActivo.text(celdaActivo.text() === 'SI' ? 'NO' : 'SI');
+            },
+            error: function(error) {
+                console.log('Error en la solicitud AJAX:', error);
+            }
+        });
+    });
+});
+</script>
+{% endblock %}

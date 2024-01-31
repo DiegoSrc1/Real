@@ -1,0 +1,66 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{%load static%}
+
+<div class="contenido_contacto">
+    
+    <div class="titulo_contacto">
+        <h1>Contacto</h1>
+    </div>
+    
+    <div class="informacion_contacto">
+        <p>Tienes algunda duda? </p>
+        <p>Escribenos en este formulario o traves de los contactos de abajo:</p>
+
+        <form action="" method="post" class="formulario_contacto">
+            {% csrf_token %}
+        
+            <div class="inputFormContacto">
+
+                <label for="">Nombre</label>
+                {{form.nombre}}
+            
+            </div>
+
+            <div class="inputFormContacto">
+
+                <label for="">Correo</label>
+                {{form.correo}}
+            
+            </div>
+
+            <div class="inputFormContacto">
+
+                <label for="">Asunto</label>
+                {{form.asunto}}
+            
+            </div>
+
+
+            <div class="inputFormContacto">
+
+                <label for="">Mensaje</label>
+                {{form.mensaje}}
+            
+            </div>
+
+
+            <div class="inputFormContacto">
+                <button type="submit"> Enviar Mensaje </button>
+            </div>
+
+
+        </form>
+        <p>WhatsApp: <a href=""> +569 34029458 </a> </p>
+        <p>Email: </p>
+        <p>Facebook: </p>
+        <p>Instragram: </p>
+
+
+
+    </div>
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,242 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="{%static 'app/img/Logo.ico' %}" type="image/x-icon">
+    
+    <link rel="stylesheet" href="{% static 'app/css/style.css' %}">
+
+    <script src="https://kit.fontawesome.com/4f8cd9a466.js" crossorigin="anonymous"></script>
+
+    <title>ArteBox</title>
+
+</head>
+<body>
+    <header>
+
+        <div class="general">
+
+            <div class  ="cuenta">
+
+                
+                <div hidden class="user">
+                
+
+                    {% if user.is_authenticated %}
+                    <i class="fa-solid fa-user fa-lg"></i>  
+                    <a href="{% url 'logout' %}">Cerrar Sesión</a>
+                    {% else %}
+                    <i class="fa-solid fa-user fa-lg"></i>  
+                    <a href="{% url 'login' %}">Acceder</a>
+
+                    {% endif %}
+                </div>
+            
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars fa-2xl" style="color: #5415a1;"></i>
+                </div>
+                
+            </div>
+            
+            <div class="centro">
+
+                <div class="contenedorlogo">
+
+                    <div class="logo">
+                        <a href="#" class="">
+                            <img  class="logolink" width="181" height="120" src="{%static 'app/img/Logo.png' %}">
+                        </a>
+                    </div>
+
+                </div>
+
+
+
+            </div>
+
+            <div class="navdiv">
+                <nav class="navar">
+                    <div>
+                        <ul>
+                            <li>
+                                <a href="{% url 'index' %}">INICIO</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'catalogo' %}">CÁTALOGO</a>
+                            </li>
+                            <li>
+                                <a href="{% url 'catalogoS' %}">SERVILLETAS</a>
+                            </li>
+                            <!--
+                            <li>
+                                <a href="#">LIQUIDACIÓN</a>
+                            </li>
+                            -->
+                            <li>
+                                <a href="{%url 'localrb' %}">LOCAL</a>
+                            </li>
+                            <li>
+                                <a href="{%url 'contacto' %}">CONTACTO</a>
+                            </li>
+
+                            {% if user.is_authenticated %}
+                                <li>
+                                    <a href="{%url 'adm' %}">ADMIN</a>
+                                </li>
+                            {% endif %}
+                        </ul>
+
+                    </div>
+                </nav>
+
+            </div>
+
+            <div class="dropdown_menu">
+                <ul>
+                    <li>
+                        <a href="{% url 'index' %}">INICIO</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'catalogo' %}">CÁTALOGO</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'catalogoS' %}">SERVILLETAS</a>
+                    </li>
+                    <!--
+                    <li>
+                        <a href="#">LIQUIDACIÓN</a>
+                    </li>
+                    -->
+                    <li>
+                        <a href="{%url 'localrb' %}">LOCAL</a>
+                    </li>
+                    <li>
+                        <a href="{%url 'contacto' %}">CONTACTO</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+    </header>
+
+
+    {% block contenido %}
+
+    {% endblock %}
+
+
+    <footer>
+        <div class="fgeneral">
+            
+            <div class="redes">
+                <figure>
+                    <img  class="logolink" width="181" height="120" src="{%static 'app/img/Logo.png' %}">
+                </figure>
+                <h5>Redes</h5>
+
+                <ul>
+                    <li>
+                        <a href="#" class="redesF"> <i class="fa-brands fa-facebook fa-2xl" style="color: #5415a1;"></i> </a>
+                    </li>
+                    <li>
+                        <a href="#" class="redesF"> <i class="fa-brands fa-instagram fa-2xl" style="color: #5415a1;"></i></a>
+                    </li>
+                    <li>
+                        <a href="#" class="redesF">  <i class="fa-brands fa-whatsapp fa-2xl" style="color: #5415a1;"></i> </a>
+                    </li>
+                </ul>
+
+
+               
+
+            </div>
+
+            <div class="infogeneral">   
+                <h5 style="margin-top: 20px;">ARTEBOX</h5>
+
+                <ul>
+                    <li>
+                        <a href="{% url 'nosotros' %}">Nosotros</a>
+                    </li>
+                </ul>
+
+                <div style="height: 24px;"> </div>
+
+                <h5>AYUDA</h5>
+
+                <ul>
+
+                    <li>
+                        <a href="{%url 'contacto' %}">Contacto</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <div class="atencion">
+
+                <h5>Horarios</h5>
+
+                <p style="margin-top: 10px;">Lunes a Sabado</p>
+
+                <h5 style="padding-top: 20px;">DIRECCIÓN</h5>
+
+                <p  style="margin-top: 10px;">Pasaje Vargas 475</p>
+
+                <p  style="margin-top: -20px;">Río Bueno</p>
+
+            </div>
+
+        </div>
+
+        <div class="ffondo" >
+            <div class="arte">
+                <p>ArteBox Río Bueno ® 2024</p>
+            </div>
+        </div>
+
+    </footer>
+</body>
+
+
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+
+        
+    {% if messages %}
+        {%for m in messages%}
+
+            <script>
+                Swal.fire({
+                    "title" :"Mensaje",
+                    "text" : "{{m}}",
+                    "icon" : "succes"
+                })
+            </script>
+            
+        {%endfor%}
+
+    {%endif%}
+
+<script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+
+    toggleBtn.onclick = function(){
+        dropDownMenu.classList.toggle('open')
+        const isOpen = dropDownMenu.classList.contains('open')
+
+        toggleBtnIcon.classList = isOpen
+        ? 'fa-solid fa-xmark fa-2xl'
+        : 'fa-solid fa-bars fa-2xl'
+    }
+</script>
+
+
+</html>

@@ -1,0 +1,53 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+<div style=" width: 99%; margin: auto;" class="contenedor_ver_producto">
+
+    <div class="Contenedor_Producto">
+
+        <div class="imagen_producto_grande">
+            <img src="{{producto.imagen.url}}" alt="">
+        </div>
+
+        <div class="detalles_producto_ver">
+
+            <div class="">
+                <h1>{{producto.nombre}}</h1>
+            </div>
+
+            <div class="">
+                <label for="">Precio</label>
+                <p>${{producto.precio}}</p>
+            </div>
+
+            <div class="">
+                <label for="">Precio al por mayor</label>
+                <p>${{producto.precio_x_mayor}}</p>
+            </div>
+
+            <div class="">
+                <label for="">Categorias</label>
+                <p>{{producto.categoria}}</p>
+            </div>
+
+            <div class="">
+                <label for="">Descripción</label>
+                <p>{{producto.descripcion}}</p>
+            </div>
+
+        </div>
+
+        
+    </div>
+
+    <div class="inputForm">
+        <Button style="width: 150px; margin-left: 30px;" onclick="window.history.back()">Volver</Button>
+    </div>
+
+</div>
+
+
+
+{% endblock %}

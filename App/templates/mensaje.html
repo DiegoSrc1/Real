@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+
+<div class="contenido_mensaje">
+
+    <div class="nombre_persona">
+        <h1>Mensaje de {{msj.nombre}}</h1>
+    </div>
+    
+    <div class="correo_persona_mensaje">
+        <h3>Correo: <a href="mailto:{{msj.correo}}"> {{msj.correo}} </a> </h3>
+    </div>
+
+    <div class="titulo_mensaje">
+        <h3>Asunto: {{msj.asunto}}</h3>
+    </div>
+    
+    <div class="mensajee">
+        <p>Mensaje: {{msj.mensaje}}</p>
+    </div>
+
+</div>
+
+{% endblock %}

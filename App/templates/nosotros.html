@@ -1,0 +1,31 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{%load static%}
+
+<div class="contenido_nosotros">
+
+    <div class="titulo_nosotros">
+        <h1>Nosotros</h1>
+    </div>
+
+    <div class="info_nosotros">
+        <p>
+            Somos una empresa dedicada a la fabricacion y distribuicion de maderas para manualidades, llevamos mas de 15 años en el mercado de las artesanias.
+        </p>
+        <p>
+            Puedes confiar en nosotros para conseguir tus materiales para decorar y trabajar nuestros productos.    
+        </p>
+        <p style="margin-top: 20px; font-size: medium;">-ArteBox</p>
+    </div>
+   
+   
+    <div class="logo_nosotros">
+        <img src="{%static 'app/img/Logo.png' %}" alt="">
+    </div>
+   
+
+
+</div>
+
+{% endblock %}

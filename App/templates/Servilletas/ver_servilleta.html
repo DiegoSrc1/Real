@@ -1,0 +1,32 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+<div style=" width: 99%; margin: auto;" class="contenedor_ver_producto">
+
+    <div class="Contenedor_Producto">
+
+        <div class="imagen_producto_grande">
+            <img src="{{servilleta.imagen.url}}" alt="">
+        </div>
+
+        <div class="detalles_producto_ver">
+
+            <div class="">
+                <h1>{{servilleta.nombre}}</h1>
+            </div>
+
+
+
+        </div>
+
+    </div>
+
+    <div class="inputForm">
+        <Button style="width: 150px; margin-left: 30px;" onclick="window.history.back()">Volver</Button>
+    </div>
+
+</div>
+
+{% endblock %}

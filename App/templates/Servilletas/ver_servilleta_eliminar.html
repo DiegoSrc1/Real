@@ -1,0 +1,37 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+<div style="height: 1000px; width: 99%; margin: auto;" class="contenedor_ver_producto">
+
+        
+    <div class="titulo_eliminar">
+        <h1>Servilleta a eliminar</h1>
+    </div>
+
+    <div class="Contenedor_Producto">
+
+
+        <div class="imagen_producto_grande">
+            <img src="{{servilleta.imagen.url}}" alt="">
+        </div>
+
+        <div class="detalles_producto_ver">
+
+            <div class="">
+                <h1>{{servilleta.nombre}}</h1>
+            </div>
+
+            <div class="boton_borrar">
+                <a href="{%url 'borrarS' servilleta.id %}" class="boton_borrarP">Borrar</a>
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+{% endblock %}

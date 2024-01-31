@@ -1,0 +1,66 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+<div class="generalCatalogo">
+
+    <div class="tituloCatalogo">
+        <h1>Servilletas</h1>
+    </div>
+
+    <div class="resultados">
+        
+        <div class="totaldeProductos">
+            Mostrando {{ serv.start_index }} - {{ serv.end_index }} de {{ serv.paginator.count }} servilletas
+
+        </div>
+
+
+    </div>
+
+    <div class="Catalogo">
+
+
+        <div class="filtrosEspecificos">
+                <h4>Precio</h4>
+                <p style="margin-top: 20px;">El precio de todas las servilletas es de $300 por unidad.</p>
+        </div>
+        
+
+        <div class="productos">
+
+            {% for p in serv %}
+            
+                {%if p.activo %}
+
+                    <div class="producto">
+                        <div class="imagenProducto">
+                            <a href="{% url 'verS' p.id %}"> <img class="imgp"  src="{{ p.imagen.url }}"> </a>
+                        </div>
+
+                        <div class="infoProducto">
+
+                            <div class="nombreP">
+                                <h6><a href="{% url 'verS' p.id %}"> {{p.nombre}}</a> </h6>
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                {%endif%}
+
+            {%endfor%}
+
+            <div class="paginator">
+                {% include 'Servilletas/paginator_servilletas.html' %}
+            </div>
+
+        </div>
+
+    </div>
+ 
+</div>
+
+{% endblock %}

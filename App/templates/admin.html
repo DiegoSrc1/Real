@@ -1,0 +1,27 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+<div style="height: 1000px; width: 100%;" class="contenidoAdm">
+
+    <div style="margin-top: 100px;" class="cajaOpcionadm">
+
+        <div class="titulopaneladm">
+            <h1>Panel Administrador</h1>
+        </div>
+
+        <a href="{% url 'addP' %}" class="btnAdm">Agregar productos</a>
+        
+        
+        <a href="{% url 'admP' %}" class="btnAdm">Administrar productos</a>
+
+        <a href="{% url 'msjs' %}" class="btnAdm">Ver mensajes contacto</a>
+
+        <a href="{% url 'addS' %}" class="btnAdm">Agregar servilletas</a>
+
+        <a href="{% url 'admS' %}" class="btnAdm">Administrar servilletas</a>
+    </div>
+    
+</div>  
+{% endblock %}

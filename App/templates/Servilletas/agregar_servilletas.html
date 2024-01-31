@@ -1,0 +1,42 @@
+{% extends 'base.html' %} 
+
+{% block contenido%}
+{% load static %}
+
+<div style="width: 100%; " class="contenedor_agregar_productos">
+
+    
+    <div class="tituloAP">
+        <h1>Agregar Servilleta</h1>
+    </div>
+    
+    <div class="caja_agregar" style="height: 300px;">
+
+        <div class="campos_agregar">
+
+            <form action="" method="post" enctype="multipart/form-data" class="form_agregar">
+
+                {% csrf_token %}
+                <div class="inputForm">
+                    <label for="nombre_producto">Nombre Servilleta</label>
+                    {{form.nombre}}
+                </div>
+
+                <div class="inputForm">
+                    <label for="imagen_producto">Imagen</label>
+                    {{form.imagen}}
+                </div>
+                
+                <div class="inputForm">
+                    <button type="submit"> Agregar Servilleta </button>
+                </div>
+            </form>
+
+        </div>
+    
+    </div>
+
+</div>
+
+
+{% endblock %}

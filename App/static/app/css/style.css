@@ -1,0 +1,1742 @@
+/*==============================================================Base==============================================================*/
+/*==============================================================Base==============================================================*/
+/*==============================================================Base==============================================================*/
+/*==============================================================Base==============================================================*/
+/*==============================================================Base==============================================================*/
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family:  "DM Sans", sans-serif;
+}
+
+
+header 
+{
+    display: block;
+    padding-right: 30px;
+    padding-left: 30px;
+    background: rgb(148,187,233);
+    background: linear-gradient(90deg, rgba(148,187,233,1) 0%, rgba(238,174,202,1) 100%);
+}
+
+.general 
+{
+    height: 340px;
+    position: relative; /* Agregado para establecer un contexto de posición relativa */
+}
+
+.cuenta
+ {
+    height: 60px;
+    color: black;
+}
+
+.cuenta a
+{
+    color: black;
+}
+
+.cuenta a:hover
+{
+    color: black;
+    border-bottom: 2px solid black; /* Ajusta el color y grosor de la línea según tus preferencias */
+}
+
+.user
+{
+    float: right;
+    padding-right: 10px;
+    padding-top: 17px;
+}
+
+.centro 
+{
+    margin-top: 10px;
+    height: 160px;
+    display: flex;
+}
+
+.contenedorlogo
+{
+    width: 450px;
+    height: 100%;
+}
+
+.buscar
+{
+    width: 74%;
+    height: 100%;
+    position: relative;
+    left: 30px;
+}
+
+
+
+.logolink
+{
+    padding-top: 20px;
+    padding-left: 20px;
+}
+
+.navdiv
+{
+    margin-top: 26px;
+    height: 80px;
+    background-color: rebeccapurple;
+    margin-left: -30px;
+    margin-right: -30px;
+    border-top: solid 2px rgb(148,187,233);
+    border-bottom: solid 2px rgb(148,187,233);
+
+}
+
+a
+{
+    text-decoration: none;
+    color: white; /* Cambia el color a negro o al color que desees */
+}
+
+.navdiv a:hover 
+{
+    border-bottom: 2px solid white; /* Ajusta el color y grosor de la línea según tus preferencias */
+}
+
+.navdiv ul
+{
+    list-style: none;
+}
+
+.navdiv li
+{
+    display: inline; /* Muestra los elementos de la lista en línea */
+    margin-left: 30px;
+}
+
+.navar
+{
+    padding-top: 33px;
+    padding-left: 20%;
+    padding-right: 20%;
+}
+
+footer{
+    background-color: black;
+    margin-top: 70px;
+}
+
+.fgeneral{
+    height: 300px;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+}
+
+.redes{
+    width: 30%;
+}
+
+.redes h5{
+    color: white;
+    margin-top: 20px;
+    font-weight: 700;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+    text-transform: uppercase;
+    margin-left: 15px;
+    margin-bottom: 20px;
+}
+
+.redesF{
+    margin-left: 15px;
+    margin-top: 20px;
+}
+
+.redes ul li{
+    display: inline-block; /* Coloca los elementos en línea uno al lado del otro */
+}
+
+.infogeneral{
+    width: 35%;
+    margin-left: 30%;
+    margin-top: -225px;
+
+
+}
+
+.infogeneral h5{
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+    text-transform: uppercase;
+
+}
+
+.infogeneral ul{
+    color: white;
+    list-style: none;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+    padding-top: 10px;
+}
+.infogeneral a:hover{
+    border-bottom: 2px solid white; /* Ajusta el color y grosor de la línea según tus preferencias */
+}
+
+.infogeneral li{
+    padding-top: 10px;
+}
+
+.atencion{
+    width: 30%;
+    margin-left: 65%;
+    margin-top: -150px;
+}
+
+.atencion h5{
+    color: white;
+    font-weight: 700;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+    text-transform: uppercase;
+}
+
+.atencion p{
+    color: white;
+    font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.ffondo{
+    height: 100px;
+    width: 100%;
+    background: rgb(70,154,103);
+    background: linear-gradient(90deg, rgba(70,154,103,1) 0%, rgba(6,152,53,1) 35%, rgba(86,21,158,1) 100%);
+}
+
+.arte p{
+    padding-top: 45px;
+    font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.156), 1rem);
+}
+
+.arte{
+    float: right;
+    width: 12%;
+    padding-right: 10px;
+}
+
+.toggle_btn{
+    display: none;
+}
+
+.dropdown_menu{
+    display: none;
+    position: absolute;
+    right: 3rem;
+    top: 20px;
+    height: 0;
+    width: 150px;
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border-radius: 10px;
+    overflow: hidden;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.dropdown_menu.open{
+    height: 240px;
+}
+.dropdown_menu li{
+    padding: 0.7rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (max-width: 600px){
+
+    body{
+        width: 100%;
+    }
+
+    .navdiv, .navar{
+        display: none;
+        margin: 0;
+    }
+    
+
+    .general{
+        height:30%;
+    }
+
+    .contenedorlogo{
+        width: 100%;
+        height: 100%;
+    }
+
+    .logo img {
+        display: block;
+        margin: 0 auto; /* Centra el logo horizontalmente */
+        margin-right: 100px;
+    }
+
+
+    header {
+    width: 100%;
+    display: block;    
+    padding-right: 0px;
+    padding-left: 0px;
+    background: rgb(148,187,233);
+    background: linear-gradient(90deg, rgba(148,187,233,1) 0%, rgba(238,174,202,1) 100%);
+    }
+
+    .toggle_btn{
+        display: block;
+        padding-top: 15px;
+        float: right;
+        margin-right: 10px;
+    }
+
+    .dropdown_menu{
+        margin-top: 17px;
+        display: block;
+        width: 50%;
+    }
+
+    
+
+    footer{
+        background-color: black;
+        margin-top: 70px;
+    }
+    
+    .fgeneral{
+        height: 300px;
+        padding-top: 20px;
+        padding-right: 30px;
+        padding-left: 30px;
+    }
+    
+    .redes{
+        width: 100%;
+        margin-left: -auto;
+    }
+
+    .redes figure img{
+        width: 30%;
+        height: 30%;
+    }
+
+
+    .redes h5{
+        color: white;
+        margin-top: 20px;
+        font-weight: 700;
+        font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+        text-transform: uppercase;
+        margin-left: 15px;
+        margin-bottom: 20px;
+    }
+    
+    .redesF{
+        margin-left: 10px;
+        margin-top: 20px;
+    }
+    
+    .redes ul li{
+        display: inline-block; /* Coloca los elementos en línea uno al lado del otro */
+    }
+    
+    .infogeneral{
+        width: 35%;
+        margin-left: 45%;
+        margin-top: -180px;
+    }
+    
+    .infogeneral h5{
+        color: white;
+        font-weight: 700;
+        font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+        text-transform: uppercase;
+        margin-top: 0px;
+    }
+    
+    .infogeneral ul{
+        color: white;
+        list-style: none;
+        font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+        padding-top: 10px;
+    }
+
+    .infogeneral a:hover{
+        border-bottom: 2px solid white; /* Ajusta el color y grosor de la línea según tus preferencias */
+    }
+    
+    .infogeneral li{
+        padding-top: 10px;
+    }
+    
+    .atencion{
+        width: 30%;
+        margin-left: 75%;
+        margin-top: -150px;
+    }
+    
+    .atencion h5{
+        color: white;
+        font-weight: 700;
+        font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+        text-transform: uppercase;
+        margin-top: 9px;
+    }
+    
+    .atencion p{
+        color: white;
+        font-size: clamp(1rem, 1rem + ((1vw - 0.2rem) * 0.156), 1.125rem);
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    
+    .ffondo{
+        height: 100px;
+        width: 100%;
+        background: rgb(70,154,103);
+        background: linear-gradient(90deg, rgba(70,154,103,1) 0%, rgba(6,152,53,1) 35%, rgba(86,21,158,1) 100%);
+    }
+    
+    .arte p{
+        padding-top: 45px;
+        font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.156), 1rem);
+    }
+    
+    .arte{
+        float: right;
+        width: 50%;
+        padding-right: 10px;
+    }
+}
+
+
+/*==============================================================Catalogo==============================================================*/
+/*==============================================================Catalogo==============================================================*/
+/*==============================================================Catalogo==============================================================*/
+/*==============================================================Catalogo==============================================================*/
+/*==============================================================Catalogo==============================================================*/
+
+.generalCatalogo{
+    width: 95%;
+    margin-left: 63px;
+    margin-top: 60px;    
+}
+
+.tituloCatalogo{
+    padding-bottom: 30px;
+}
+
+.tituloCatalogo h1{
+    font-size: 40px;
+}
+
+.resultados{
+    display: flex;
+}
+
+
+.Catalogo{
+    width: 95%;
+    height: 80%;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row; /* Asegura que los elementos estén en una fila */
+}
+
+.productos{
+    width: 77%;
+    display: flex;
+    flex-wrap: wrap; /* Añadir esta línea para que los elementos se envuelvan hacia abajo */
+    margin-left: 30px;
+    padding-bottom: 50px;
+}
+
+.producto{
+    height: 492px;
+    width: 410px;
+    margin: 10px; /* Añadir margen entre los productos para mejorar la presentación */
+}
+
+
+.imagenProducto{
+    width: 100%;
+}
+
+.imgp{
+    width: 350px;
+    height: 350px;
+    margin: 30px;
+}
+
+.infoProducto a{
+    color: black;
+    text-decoration: none;
+}
+
+.precioP p{
+    text-align: center;
+    padding: 5px;
+}
+
+.infoProducto {
+    font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.156), 1rem);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.nombreP h6{
+    text-align: center;
+    font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.156), 1rem);
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.nombreP h6 a {
+    text-decoration: none; /* Elimina la decoración predeterminada del enlace */
+    transition: text-decoration 0.3s ease; /* Agrega una transición suave al subrayado */
+}
+
+.nombreP h6 a:hover {
+    text-decoration: underline; /* Agrega subrayado al pasar el mouse sobre el enlace */
+}
+
+.paginator ul li a{
+    color: black;
+    padding: 5px;
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 400;
+
+}
+
+.paginator ul li a:hover{
+    border-bottom: 1px solid black; /* Ajusta el color y grosor de la línea según tus preferencias */
+}
+
+.paginator span a {
+    color: black;
+
+}
+
+.paginator ul{
+    list-style: none;
+    display: flex;
+
+}
+
+.paginator {
+    width: 100%;
+    margin-top: 20px;  /* Ajusta el espacio entre los productos y el paginador */
+    margin-left: 45%;
+}
+
+.filtrosEspecificos{
+    margin-top: 30px;
+    width: 23%;    
+}
+
+
+.filtrosEspecificos h4{  
+    display: block;
+    font-weight: lighter;
+    font-size: 1.2rem;
+    border-bottom: 1px solid black;
+}
+
+.filtrosEspecificos button{
+    margin-top: 30px;
+    padding: 10px;
+    width: 90px;
+    background-color: rebeccapurple;
+    border: 1px blueviolet;
+    color: white;
+}
+
+
+@media screen and (max-width: 600px){
+
+    .generalCatalogo{
+        width: 90%;
+        margin-left: 10px;
+        margin-top: 10px;    
+    }
+    
+    .tituloCatalogo{
+        padding-bottom: 30px;
+    }
+    
+    .tituloCatalogo h1{
+        font-size: 40px;
+    }
+    
+    .resultados{
+        display: flex;
+    }
+    
+
+    .Catalogo{
+        width: 100%;
+        height: 80%;
+        margin-top: 20px;
+        display: block;
+    }
+    
+    .productos{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap; /* Añadir esta línea para que los elementos se envuelvan hacia abajo */
+        margin-left: 5%;
+        padding-bottom: 50px;
+    }
+    
+    .producto{
+        height: 450px;
+        width: 410px;
+        margin: 10px; /* Añadir margen entre los productos para mejorar la presentación */
+    }
+    
+    
+    .imagenProducto{
+        width: 100%;
+    }
+    
+    .imgp{
+        width: 100%;
+        height: 100%;
+        margin: -10px;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+    
+    .infoProducto a{
+        color: black;
+        text-decoration: none;
+    }
+    
+    .precioP p{
+        text-align: center;
+        padding: 5px;
+    }
+    
+    .infoProducto {
+        font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.156), 1rem);
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    .nombreP h6{
+        text-align: center;
+        font-size: clamp(0.875rem, 0.875rem + ((1vw - 0.2rem) * 0.156), 1rem);
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    .nombreP h6 a {
+        text-decoration: none; /* Elimina la decoración predeterminada del enlace */
+        transition: text-decoration 0.3s ease; /* Agrega una transición suave al subrayado */
+    }
+    
+    .nombreP h6 a:hover {
+        text-decoration: underline; /* Agrega subrayado al pasar el mouse sobre el enlace */
+    }
+    
+    .paginator ul li a{
+        color: black;
+        padding: 5px;
+        font-size: var(--wp--preset--font-size--small);
+        font-weight: 400;
+    
+    }
+    
+    .paginator ul li a:hover{
+        border-bottom: 1px solid black; /* Ajusta el color y grosor de la línea según tus preferencias */
+    }
+    
+    .paginator span a {
+        color: black;
+    
+    }
+    
+    .paginator ul{
+        list-style: none;
+        display: flex;
+    
+    }
+    
+    .paginator {
+        width: 100%;
+        margin-top: 20px;  /* Ajusta el espacio entre los productos y el paginador */
+        margin-left: 35%;
+    }
+    
+    .filtrosEspecificos{
+        margin-top: 30px;   
+        width: 100%;    
+    }
+    
+    
+    .filtrosEspecificos h4{  
+        display: block;
+        font-weight: lighter;
+        font-size: 1.2rem;
+        border-bottom: 1px solid black;
+    }
+    
+    .filtrosEspecificos button{
+        margin-top: 30px;
+        padding: 10px;
+        width: 90px;
+        background-color: rebeccapurple;
+        border: 1px blueviolet;
+        color: white;
+    }
+    
+}
+
+/*==============================================================Admin==============================================================*/
+/*==============================================================Admin==============================================================*/
+/*==============================================================Admin==============================================================*/
+/*==============================================================Admin==============================================================*/
+/*==============================================================Admin==============================================================*/
+
+.cajaOpcionadm{
+    margin: auto;
+    width: 50%;
+    height: 70%;
+
+}
+
+.btnAdm{
+    margin: auto;
+    color: white;
+    padding: 20px;
+    border: 1px solid black;
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    width: 50%;
+    background: rgb(148,187,233);
+    background: linear-gradient(90deg, rgba(148,187,233,1) 0%, rgba(102,51,153,1) 100%);
+    font-weight: 100;
+    font-size: large;
+
+    
+}
+.btnAdm:hover{
+    background-color: black;
+    color: white;
+
+}
+
+.titulopaneladm h1{
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+    line-height: 1.2;
+    font-weight: 400;
+    display: block;
+    text-align: center;
+    margin-bottom: 30px;
+    text-decoration: underline ;
+}
+
+.contenedor-tabla{
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    height: 100%;
+}
+
+.tabla-productos{
+    width: 100%;
+    font-size: 0.9em;
+    border: solid 1px black;
+    border-collapse: collapse;
+
+}
+
+.tabla-productos th{ 
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(102, 51, 153);
+    border-bottom: 1px  solid slateblue;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+
+
+}
+
+.tabla-productos tbody{
+    background: rgb(148,187,233);
+    background: linear-gradient(90deg, rgba(148,187,233,1) 0%, rgba(102,51,153,1) 100%);
+    color: white;
+}
+
+.tabla-productos td{ 
+    text-align: center;
+    font-size: large;
+    font-weight: 100;
+}
+
+.paginator2 {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;  /* Ajusta el espacio entre la tabla y el paginador */
+}
+
+.paginator2 ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;  /* Centra los elementos horizontalmente */
+}
+
+.paginator2 ul li {
+    margin: 0 5px;  /* Ajusta el espacio entre los elementos del paginador */
+}
+
+.paginator2 ul li a {
+    color: black;
+    padding: 5px;
+    font-size: var(--wp--preset--font-size--small);
+    font-weight: 400;
+}
+
+.paginator2 ul li a:hover {
+    border-bottom: 1px solid black; /* Ajusta el color y grosor de la línea según tus preferencias */
+}
+
+
+
+
+/*==============================================================AgregarProducto==============================================================*/
+/*==============================================================AgregarProducto==============================================================*/
+/*==============================================================AgregarProducto==============================================================*/
+/*==============================================================AgregarProducto==============================================================*/
+/*==============================================================AgregarProducto==============================================================*/
+
+
+.caja_agregar{
+    margin: auto;
+    width: 40%;
+    height: 70%;
+    border: 1px solid black;
+    background: rgb(148,187,233);
+    background: linear-gradient(90deg, rgba(148,187,233,1) 0%, rgba(102,51,153,1) 100%);
+}
+
+
+.tituloAP{
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.tituloAP h1{
+    margin-top: 100px;
+}
+
+.inputForm{
+    margin: auto;
+    width: 90%;
+    margin-top: 10px;
+}
+
+.inputForm label{
+    font-size: x-large;
+    display: block;
+    margin-bottom: 0px;
+}
+.inputForm input{
+    box-sizing: border-box;
+    width: 60%;
+    font-size: var(--wp--preset--font-size--small);
+    padding: 0.9rem 1.1rem;
+}
+
+.inputForm2{
+    margin: auto;
+    width: 90%;
+    margin-top: 10px;
+}
+.inputForm2 label{
+    font-size: x-large;
+    display: block;
+    margin-bottom: 0px;
+}
+
+.inputForm2 button{
+    margin-top: 20px;
+    padding: 1rem 2rem; 
+    background-color: rebeccapurple;
+    color: white;
+    border: 1px solid slateblue;
+}
+
+.inputForm button{
+    margin-top: 20px;
+    padding: 1rem 2rem; 
+    background-color: rebeccapurple;
+    color: white;
+    border: 1px solid slateblue;
+    width: 60%;
+    
+}
+
+
+.Contenedor_Producto{
+    margin-top: 30px;
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.imagen_producto_grande{
+    width: 40%;
+    height: 100%;
+    margin-left: 50px;
+    
+}
+
+.detalles_producto_ver{
+    width: 50%;
+    height: 100%;
+    margin-right: 50px;
+}
+
+.detalles_producto_ver h1{
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+    line-height: 1.2;
+    display: block;
+
+}
+
+.detalles_producto_ver p{
+    margin-top: 10px;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 1.5rem);
+}
+
+.detalles_producto_ver label{
+    margin-top: 30px;
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 2.5rem);
+    line-height: 1.2;
+    display: block;
+    text-decoration: underline;
+
+}
+
+.imagen_producto_grande img{
+    margin-left: 10%;
+    width: 90%;
+    height: 80%;
+}
+
+.titulo_eliminar{
+    margin-top: 100px;
+    margin-left: 6.5%;
+}
+
+.titulo_eliminar h1{
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+    line-height: 1.2;
+    display: block;
+}
+
+.boton_borrarP{
+    color: white;
+    padding: 20px;
+    background: rgb(252,176,69);
+    background: linear-gradient(90deg, rgba(252,176,69,1) 0%, rgba(253,29,29,1) 59%);
+    border: 1px solid black;
+    font-weight: 100;
+    font-size: large;
+    width: 50%;
+    display: block;
+    text-align: center;
+}
+
+
+
+.boton_borrar{
+    margin-top: 9%;
+    width: 100%;
+}
+
+
+@media screen and (max-width: 600px){
+    
+    .Contenedor_Producto{
+        margin-top: 30px;
+        width: 100%;
+        height: 90%;
+        display: block; 
+    
+    }
+    
+    .imagen_producto_grande{
+        width: 90%;
+        height: 90%;
+        margin-left: 0px;
+        
+    }
+    
+    .detalles_producto_ver{
+        width: 90%;
+        height: 100%;
+        margin-right: 50px;
+        margin-left: 30px;
+    }
+    
+    .detalles_producto_ver h1{
+        font-weight: 400;
+        font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 5.625rem);
+        line-height: 1.2;
+        display: block;
+    
+    }
+    
+    .detalles_producto_ver p{
+        margin-top: 10px;
+        font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 1.5rem);
+    }
+    
+    .detalles_producto_ver label{
+        margin-top: 30px;
+        font-weight: 400;
+        font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 2.5rem);
+        line-height: 1.2;
+        display: block;
+        text-decoration: underline;
+    
+    }
+    
+    .imagen_producto_grande img{
+        margin-left: 6%;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+
+
+/*==============================================================Index==============================================================*/
+/*==============================================================Index==============================================================*/
+/*==============================================================Index==============================================================*/
+/*==============================================================Index==============================================================*/
+/*==============================================================Index==============================================================*/
+
+
+
+.local{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 30px;
+
+}
+
+.hubicacion{
+    width: 99%;
+    height: 500px;
+    margin-bottom: 30px;
+}
+
+.tituloMapa h1{
+    text-align: center;
+}
+
+.tituloMapa{
+    margin-top: 30px;
+}
+
+.mapa{
+    margin: auto;
+    width: 50%;
+    height: 100%;
+    border: 10px solid rebeccapurple;
+    border-radius: 2%;
+}
+
+.local img{
+    margin: auto;
+    width: 100%;
+    height: 100%;
+
+}
+
+.productos_y_mas{
+    margin: auto;
+    margin-top: 30px;
+    width: 99%;
+    height: 540px;
+    display: flex;
+}
+
+.cajas{
+    margin: 1%;
+    width: 32%;
+    height: 500px;
+}
+.cajas img{
+    width: 100%;
+    height: 100%;
+}
+
+.productos_y_mas a{
+    color: black;
+    text-decoration: underline 1px black;   
+}
+
+
+.corte_laser{
+    margin: 1%;
+    width: 32%;
+    height: 500px;
+}
+
+.corte_laser img{
+    width: 100%;
+    height: 100%;
+}
+
+.servilletas{
+    margin: 1%;
+    width: 32%;
+    height: 500px;
+}
+
+.servilletas img{
+    width: 100%;
+    height: 100%;
+
+}
+
+
+
+.cajas, .corte_laser, .servilletas {
+    position: relative;
+}
+
+.cajas h1, .corte_laser h1, .servilletas h1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+    color: white;
+
+}
+
+.cajas img, .corte_laser img, .servilletas img {
+    width: 100%;
+    height: 100%;
+    position: relative; /* Agrega esto para que las imágenes estén en el flujo normal del documento */
+    z-index: 0; /* Asegura que las imágenes estén detrás del texto y los enlaces */
+}
+
+.cajas a, .corte_laser a, .servilletas a {
+    position: absolute;
+    top: 55%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1; /* Asegura que el texto esté sobre la imagen */
+    font-size: large;
+    color: white;
+    text-decoration: underline;
+    
+}
+
+@media screen and (max-width: 600px){
+    .local{
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        margin-bottom: 10px;
+    }
+
+    .productos_y_mas{
+        margin: auto;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .cajas{
+        margin: auto;
+        width: 90%;
+        margin-bottom: 20px;
+        height: 500px;
+    }
+
+    .cajas img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .productos_y_mas a{
+        color: white;
+        text-decoration: underline 1px white;   
+    }
+    
+    
+    .corte_laser{
+        margin: auto;
+        width: 90%;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+
+    .corte_laser a{
+        margin-top: 20px;
+    }
+
+    .corte_laser h1{
+        margin-left: 23px;
+    }
+    
+    .corte_laser img{
+        width: 100%;
+        height: 100%;
+    }
+    
+    .servilletas{
+        margin: auto;
+        width: 90%;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+    
+    .servilletas img{
+        width: 100%;
+        height: 100%;
+    
+    }
+
+    .contenIndex{
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+    }
+    
+
+    .hubicacion{
+        width: 99%;
+        height: 500px;
+        margin-bottom: 30px;
+    }
+    
+    .tituloMapa h1{
+        text-align: center;
+    }
+    
+    .tituloMapa{
+        margin-top: 30px;
+    }
+    
+    .mapa{
+        margin: auto;
+        width: 80%;
+        height: 100%;
+        border: 5px solid rebeccapurple;
+        border-radius: 2%;
+    }
+}
+
+
+/*==============================================================Local==============================================================*/
+/*==============================================================Local==============================================================*/
+/*==============================================================Local==============================================================*/
+/*==============================================================Local==============================================================*/
+/*==============================================================Local==============================================================*/
+
+
+.contenidoLocal{
+    width: 100%;
+}
+
+.titulo_local{
+    width: 95%;
+    height: 100px;
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+.titulo_local h1{
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+    line-height: 1.2;
+}
+
+.ubicacion_local{
+    width: 95%;
+    height: 250px;
+    margin-left: 70px;
+}
+
+.ubicacion_local h3{
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 1rem);
+    margin-bottom: 20px;
+}
+
+.ubicacion_local p{
+    font-size: larger;
+    margin-bottom: 20px;
+}
+
+.mapa2{
+    width: 50%;
+    height: 100%;
+    border: 7px solid rebeccapurple;
+    border-radius: 2%;
+}
+
+
+.mapa_local{
+    margin-left: 70px;
+    height: 500px;
+}
+
+@media screen and (max-width: 600px){
+
+    .contenidoLocal{
+        width: 100%;
+    }
+    
+    .titulo_local{
+        width: 95%;
+        height: 100px;
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+    
+    .titulo_local h1{
+        font-weight: 400;
+        font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+        line-height: 1.2;
+    }
+    
+    .ubicacion_local{
+        width: 95%;
+        height: 250px;
+        margin-left: 10px;
+    }
+    
+    .ubicacion_local h3{
+        font-weight: 400;
+        font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 1rem);
+        margin-bottom: 0px;
+    }
+    
+    .ubicacion_local p{
+        font-size: larger;
+        margin-bottom: 20px;
+    }
+    
+    .mapa2{
+        width: 90%;
+        height: 100%;
+        border: 5px solid rebeccapurple;
+        border-radius: 2%;
+    }
+    
+    
+    .mapa_local{
+        margin-left: 10px;
+        height: 500px;
+    }
+    
+
+}
+/*==============================================================Contacto==============================================================*/
+/*==============================================================Contacto==============================================================*/
+/*==============================================================Contacto==============================================================*/
+/*==============================================================Contacto==============================================================*/
+/*==============================================================Contacto==============================================================*/
+
+
+
+.contenido_contacto{
+    width: 95%;
+    height: 1000px;
+}
+
+.titulo_contacto{
+    height: 100px;
+    margin-top: 100px;
+    margin-left: 70px;
+}
+
+.titulo_contacto h1{
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+    line-height: 1.2;
+}
+
+.informacion_contacto{
+    width: 95%;
+    height: 250px;
+    margin-left: 70px;
+}
+
+.informacion_contacto a{
+    color: rebeccapurple;
+    text-decoration: underline;
+}
+
+.informacion_contacto p{
+    margin-bottom: 20px;
+}
+
+.inputFormContacto{
+    width: 50%;
+    margin-top: 30px;
+}
+
+.inputFormContacto label{
+    font-size: x-large;
+    display: block;
+    margin-bottom: 0px;
+}
+.inputFormContacto input{
+    box-sizing: border-box;
+    width: 60%;
+    font-size: var(--wp--preset--font-size--small);
+    padding: 0.9rem 1.1rem;
+}
+
+.inputFormContacto textarea{
+    width: 60%;
+    height: 100px;
+}
+
+
+.inputFormContacto button{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 1rem 2rem; 
+    background-color: rebeccapurple;
+    color: white;
+    border: 1px solid slateblue;
+    width: 60%;
+}
+
+@media screen and (max-width: 600px){
+
+    .contenido_contacto{
+        width: 100%;
+        height: 1000px;
+    }
+
+    .titulo_contacto{
+        height: 100px;
+        margin-top: 100px;
+        margin-left: 30px;
+    }
+
+    .titulo_contacto h1{
+        font-weight: 400;   
+        font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+        line-height: 1.2;
+    }
+
+    .informacion_contacto{
+        width: 90%;
+        height: 100%;
+        margin-left: 30px;
+    }
+
+    .informacion_contacto a{
+        color: rebeccapurple;
+        text-decoration: underline;
+    }
+    
+    .informacion_contacto p{
+        width: 70%;
+        margin-bottom: 20px;
+    }
+    
+    .inputFormContacto{
+        width: 100%;
+        margin-top: 30px;
+    }
+    
+    .inputFormContacto label{
+        font-size: x-large;
+        display: block;
+        margin-bottom: 0px;
+    }
+    .inputFormContacto input{
+        box-sizing: border-box;
+        width: 60%;
+        font-size: var(--wp--preset--font-size--small);
+        padding: 0.9rem 1.1rem;
+    }
+    
+    .inputFormContacto textarea{
+        width: 60%;
+        height: 100px;
+    }
+    
+    
+    .inputFormContacto button{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 1rem 2rem; 
+        background-color: rebeccapurple;
+        color: white;
+        border: 1px solid slateblue;
+        width: 60%;
+    }
+
+}
+
+/*==============================================================Nosotros==============================================================*/
+/*==============================================================Nosotros==============================================================*/
+/*==============================================================Nosotros==============================================================*/
+/*==============================================================Nosotros==============================================================*/
+/*==============================================================Nosotros==============================================================*/
+
+
+.contenido_nosotros{
+    width: 95%;
+    margin-left: 70px;
+}
+
+.info_nosotros{
+    width: 40%;
+
+    margin-bottom: 300px;
+}
+
+.info_nosotros p{
+    font-size: clamp(16.293px, 1.018rem + ((1vw - 3.2px) * 0.68), 25px);
+    line-height: 1.2;
+}
+
+
+
+.titulo_nosotros{
+    width: 95%;   
+    margin-bottom: 200px;
+}
+
+.titulo_nosotros h1{
+    font-weight: 400;
+    margin-top: 100px;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+    line-height: 1.2;
+}
+
+.logo_nosotros{
+    position: absolute;
+    left: 60%;
+    top: 50%;
+}
+
+@media screen and (max-width: 600px){
+    .contenido_nosotros{
+        width: 95%;
+        margin-left: 15px;
+    }
+    
+    .info_nosotros{
+        width: 40%;
+        margin-bottom: 10px;
+    }
+    
+    .info_nosotros p{
+        font-size: clamp(16.293px, 1.018rem + ((1vw - 3.2px) * 0.68), 25px);
+        line-height: 1.2;
+    }
+    
+    
+    
+    .titulo_nosotros{
+        width: 95%;   
+        margin-bottom: 10px;
+    }
+    
+    .titulo_nosotros h1{
+        font-weight: 400;
+        margin-top: 100px;
+        font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+        line-height: 1.2;
+    }
+    
+    .logo_nosotros{
+        position: absolute;
+        left: 60%;
+        top: 50%;
+    }
+
+    .logo_nosotros img{
+        width: 80%;
+        height: 80%;
+    }
+}
+
+/*==============================================================Mensajes==============================================================*/
+/*==============================================================Mensajes==============================================================*/
+/*==============================================================Mensajes==============================================================*/
+/*==============================================================Mensajes==============================================================*/
+/*==============================================================Mensajes==============================================================*/
+
+
+.contenido_mensajes{
+    width: 100%;
+    height: 1000px;
+
+}
+
+
+.contenedor-tabla-mensaje{
+    margin: auto;
+    margin-top: 100px;
+    width: 80%;
+    height: 100%;
+}
+
+.tabla-mensaje{
+    width: 100%;
+    font-size: 0.9em;
+    border: solid 1px black;
+    border-collapse: collapse;
+
+}
+
+
+
+.tabla-mensaje th{ 
+    text-align: center;
+    padding: 10px;
+    background-color: rgb(102, 51, 153);
+    border-bottom: 1px  solid slateblue;
+    color: white;
+    font-size: large;
+    font-weight: 500;
+
+
+}
+
+.tabla-mensaje tbody{
+    background: rgb(148,187,233);
+    background: linear-gradient(90deg, rgba(148,187,233,1) 0%, rgba(102,51,153,1) 100%);
+    color: white;
+}
+
+.tabla-mensaje td{ 
+    text-align: center;
+    font-size: large;
+    font-weight: 100;
+    padding: 10px;
+}
+
+
+.contenido_mensaje{
+    width: 100%;
+    height: 700px;
+    margin-left: 100px;
+    margin-top: 100px;
+}
+
+.nombre_persona h1{
+    font-weight: 400;
+    margin-top: 100px;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 3.625rem);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.correo_persona_mensaje h3{
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 1rem);
+    margin-bottom: 20px;
+}
+
+.correo_persona_mensaje a{
+    color: rebeccapurple;
+    text-decoration: underline;
+}
+
+.titulo_mensaje h3{
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 1rem);
+    margin-bottom: 20px;
+}
+
+.mensajee p{
+    font-size: clamp(16.293px, 1.018rem + ((1vw - 3.2px) * 0.68), 25px);
+    line-height: 1.2;
+}
+
+
+
+
+
+/*==============================================================Login==============================================================*/
+/*==============================================================Login==============================================================*/
+/*==============================================================Login==============================================================*/
+/*==============================================================Login==============================================================*/
+/*==============================================================Login==============================================================*/
+
+
+.login{
+    margin: auto;
+    width: 50%;
+    height: 50%;
+    margin-top: 100px;
+}
+
+.inputFormL{
+    margin: auto;
+    margin-left: 20%;
+    width: 100%;
+    margin-top: 10px;
+}
+
+.inputFormL label{
+    font-size: x-large;
+    display: block;
+    margin-bottom: 0px;
+}
+.inputFormL input{
+    box-sizing: border-box;
+    width: 60%;
+    font-size: var(--wp--preset--font-size--small);
+    padding: 0.9rem 1.1rem;
+}
+
+.inputFormL button{
+    margin-top: 20px;
+    padding: 1rem 2rem; 
+    background-color: rebeccapurple;
+    color: white;
+    border: 1px solid slateblue;
+    width: 60%;
+    
+}
+
+
+.tituloL{
+    text-align: center;
+    font-size: large;
+    font-weight: 500;
+    text-decoration: underline;
+    margin-bottom: 30px;
+}
+
+.tituloL h1{
+    font-weight: 400;
+    font-size: clamp(2.032rem, 2.032rem + ((1vw - 0.2rem) * 1.991), 2.5rem);
+    line-height: 1.2;
+}
